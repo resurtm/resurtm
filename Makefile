@@ -1,6 +1,12 @@
-.PHONY: default push
+.PHONY: default clean build push
 
-default: push
+default: build
+
+clean:
+	rm -rfv public/*
+
+build:
+	hugo
 
 push:
 	git push origin master
